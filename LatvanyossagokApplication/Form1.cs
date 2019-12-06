@@ -74,8 +74,29 @@ namespace LatvanyossagokApplication
                     var id = reader.GetInt32("id");
                     var nev = reader.GetString("nev");
                     var lakossag = reader.GetInt32("lakossag");
-                    listBoxVarosNevek.Items.Add(nev);
-                    listBoxVarosok.Items.Add(nev+"– Lakosság: "+lakossag+ " fő");
+                    var varos = new Varosok(id, nev, lakossag);
+                    listBoxVarosNevek.Items.Add(varos);
+                    listBoxVarosok.Items.Add(varos);
+                }
+            }
+        }
+        void latvanyossagLista()
+        {
+            listBoxLatvanyossagok.Items.Clear();
+            
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"SELECT `id`, `nev`, `leiras`, `ar`, `varos_id` FROM `latvanyossagok`";
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var id = reader.GetInt32("id");
+                    var nev = reader.GetString("nev");
+                    var ar = reader.GetInt32("ar");
+                    var leiras = reader.GetString("leiras");
+                    var vid = reader.GetInt32("varos_id");
+                    var latvanyossag = new Latvanyossag(id,nev,leiras,ar,vid);
+                    listBoxLatvanyossagok.Items.Add(latvanyossag);
                 }
             }
         }
@@ -88,10 +109,91 @@ namespace LatvanyossagokApplication
             cmd.ExecuteNonQuery();
             VarosListazas();
         }
+        private void buttonLFeltolt_Click(object sender, EventArgs e)
+        {
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"INSERT INTO `latvanyossagok`(`nev`, `leiras`, `ar`, `varos_id`) VALUES (@nev,@leiras,@ar,@varosId)";
+            cmd.Parameters.AddWithValue("@nev", textBoxLNev.Text);
+            cmd.Parameters.AddWithValue("@leiras", textBoxLeiras.Text);
+            cmd.Parameters.AddWithValue("@ar", numericUpDownLAr.Value);
+            var varos = (Varosok)listBoxVarosNevek.SelectedItem;
+            cmd.Parameters.AddWithValue("@varosId", varos.Id);
+            cmd.ExecuteNonQuery();
+            latvanyossagLista();
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             VarosListazas();
+            latvanyossagLista();
+        }
+
+        private void listBoxVarosok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonVTorles.Enabled = true;
+            label6.Enabled = true;
+            label7.Enabled = true;
+            textBoxVarosNevModosit.Enabled = true;
+            numericUpDownVarosLakossagModosit.Enabled = true;
+            var varos = (Varosok)listBoxVarosok.SelectedItem;
+            textBoxVarosNevModosit.Text = varos.Nev;
+            numericUpDownVarosLakossagModosit.Value = varos.Lakossag;
+        }
+
+
+        private void buttonVTorles_Click(object sender, EventArgs e)
+        {
+            if (listBoxVarosok.SelectedIndex == -1)
+            {
+                MessageBox.Show("Nincs város kiválasztva!");
+                return;
+            }
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"DELETE 
+                            FROM varosok 
+                            WHERE id = @id";
+
+            var varos = (Varosok)listBoxVarosok.SelectedItem;
+            cmd.Parameters.AddWithValue("@id", varos.Id);
+
+            cmd.ExecuteNonQuery();
+
+            VarosListazas();
+        }
+
+        private void buttonLTorles_Click(object sender, EventArgs e)
+        {
+            if (listBoxLatvanyossagok.SelectedIndex == -1)
+            {
+                MessageBox.Show("Nincs Látványosság kiválasztva!");
+                return;
+            }
+            var cmd = conn.CreateCommand();
+            cmd.CommandText = @"DELETE 
+                            FROM latvanyossagok 
+                            WHERE id = @id";
+
+            var latvanyossag = (Latvanyossag)listBoxLatvanyossagok.SelectedItem;
+            cmd.Parameters.AddWithValue("@id", latvanyossag.LatvanyossagId);
+
+            cmd.ExecuteNonQuery();
+
+            latvanyossagLista();
+        }
+
+        private void listBoxLatvanyossagok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonLTorles.Enabled = true;
+            label10.Enabled = true;
+            label9.Enabled = true;
+            label8.Enabled = true;
+            textBoxLatvanyNevModosit.Enabled = true;
+            textBoxLatvanyosLeirasModosit.Enabled = true;
+            numericUpDownLatvanyArModosit.Enabled = true;
+            var latavnyossag = (Latvanyossag)listBoxLatvanyossagok.SelectedItem;
+            textBoxLatvanyNevModosit.Text = latavnyossag.LatvanyossagNev;
+            textBoxLatvanyosLeirasModosit.Text = latavnyossag.LatvanyossagLeiras;
+            numericUpDownLatvanyArModosit.Value = latavnyossag.LatvanyossagAr;
         }
     }
 }

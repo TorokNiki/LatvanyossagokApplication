@@ -117,14 +117,98 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;buttonVarosFeltolt.Name" xml:space="preserve">
+    <value>buttonVarosFeltolt</value>
+  </data>
+  <data name="&gt;&gt;buttonVarosFeltolt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonVarosFeltolt.Parent" xml:space="preserve">
+    <value>groupBoxVaros</value>
+  </data>
+  <data name="&gt;&gt;buttonVarosFeltolt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBoxVaros</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBoxVaros</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVarosLakossag.Name" xml:space="preserve">
+    <value>numericUpDownVarosLakossag</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVarosLakossag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVarosLakossag.Parent" xml:space="preserve">
+    <value>groupBoxVaros</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownVarosLakossag.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBoxVarosNev.Name" xml:space="preserve">
+    <value>textBoxVarosNev</value>
+  </data>
+  <data name="&gt;&gt;textBoxVarosNev.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxVarosNev.Parent" xml:space="preserve">
+    <value>groupBoxVaros</value>
+  </data>
+  <data name="&gt;&gt;textBoxVarosNev.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="groupBoxVaros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 3</value>
+  </data>
+  <data name="groupBoxVaros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 217</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="groupBoxVaros.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBoxVaros.Text" xml:space="preserve">
+    <value>Város hozzáadása</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVaros.Name" xml:space="preserve">
+    <value>groupBoxVaros</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVaros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVaros.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVaros.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="buttonVarosFeltolt.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 157</value>
   </data>
   <data name="buttonVarosFeltolt.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 36</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonVarosFeltolt.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -240,143 +324,65 @@ a db száma:</value>
   <data name="&gt;&gt;textBoxVarosNev.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="groupBoxVaros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 21</value>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="groupBoxVaros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 199</value>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 125</value>
   </data>
-  <data name="groupBoxVaros.TabIndex" type="System.Int32, mscorlib">
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 17</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Leírás:</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>groupBoxLatvanyossag</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="groupBoxVaros.Text" xml:space="preserve">
-    <value>Város hozzáadása</value>
+  <data name="textBoxLeiras.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 95</value>
   </data>
-  <data name="&gt;&gt;groupBoxVaros.Name" xml:space="preserve">
-    <value>groupBoxVaros</value>
+  <data name="textBoxLeiras.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 1000</value>
   </data>
-  <data name="&gt;&gt;groupBoxVaros.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="textBoxLeiras.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;groupBoxVaros.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="textBoxLeiras.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 65</value>
   </data>
-  <data name="&gt;&gt;groupBoxVaros.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="textBoxLeiras.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;textBoxLeiras.Name" xml:space="preserve">
+    <value>textBoxLeiras</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>groupBoxLatvanyossag</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;listBoxVarosNevek.Name" xml:space="preserve">
-    <value>listBoxVarosNevek</value>
-  </data>
-  <data name="&gt;&gt;listBoxVarosNevek.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listBoxVarosNevek.Parent" xml:space="preserve">
-    <value>groupBoxLatvanyossag</value>
-  </data>
-  <data name="&gt;&gt;listBoxVarosNevek.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;buttonLFeltolt.Name" xml:space="preserve">
-    <value>buttonLFeltolt</value>
-  </data>
-  <data name="&gt;&gt;buttonLFeltolt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonLFeltolt.Parent" xml:space="preserve">
-    <value>groupBoxLatvanyossag</value>
-  </data>
-  <data name="&gt;&gt;buttonLFeltolt.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBoxLatvanyossag</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>groupBoxLatvanyossag</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLAr.Name" xml:space="preserve">
-    <value>numericUpDownLAr</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLAr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLAr.Parent" xml:space="preserve">
-    <value>groupBoxLatvanyossag</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownLAr.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBoxLNev.Name" xml:space="preserve">
-    <value>textBoxLNev</value>
-  </data>
-  <data name="&gt;&gt;textBoxLNev.Type" xml:space="preserve">
+  <data name="&gt;&gt;textBoxLeiras.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBoxLNev.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textBoxLeiras.Parent" xml:space="preserve">
     <value>groupBoxLatvanyossag</value>
   </data>
-  <data name="&gt;&gt;textBoxLNev.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="groupBoxLatvanyossag.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 243</value>
-  </data>
-  <data name="groupBoxLatvanyossag.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 284</value>
-  </data>
-  <data name="groupBoxLatvanyossag.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupBoxLatvanyossag.Text" xml:space="preserve">
-    <value>Látványosság hozzáadása</value>
-  </data>
-  <data name="&gt;&gt;groupBoxLatvanyossag.Name" xml:space="preserve">
-    <value>groupBoxLatvanyossag</value>
-  </data>
-  <data name="&gt;&gt;groupBoxLatvanyossag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxLatvanyossag.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBoxLatvanyossag.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textBoxLeiras.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 185</value>
+    <value>13, 194</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 34</value>
@@ -398,13 +404,13 @@ az adott várost: </value>
     <value>groupBoxLatvanyossag</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="listBoxVarosNevek.ItemHeight" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="listBoxVarosNevek.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 143</value>
+    <value>129, 166</value>
   </data>
   <data name="listBoxVarosNevek.Size" type="System.Drawing.Size, System.Drawing">
     <value>209, 100</value>
@@ -422,10 +428,10 @@ az adott várost: </value>
     <value>groupBoxLatvanyossag</value>
   </data>
   <data name="&gt;&gt;listBoxVarosNevek.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="buttonLFeltolt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 249</value>
+    <value>129, 272</value>
   </data>
   <data name="buttonLFeltolt.Size" type="System.Drawing.Size, System.Drawing">
     <value>78, 29</value>
@@ -446,13 +452,13 @@ az adott várost: </value>
     <value>groupBoxLatvanyossag</value>
   </data>
   <data name="&gt;&gt;buttonLFeltolt.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 105</value>
+    <value>3, 53</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>125, 17</value>
@@ -473,13 +479,13 @@ az adott várost: </value>
     <value>groupBoxLatvanyossag</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 52</value>
+    <value>6, 28</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 17</value>
@@ -500,10 +506,10 @@ az adott várost: </value>
     <value>groupBoxLatvanyossag</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="numericUpDownLAr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>159, 100</value>
+    <value>157, 51</value>
   </data>
   <data name="numericUpDownLAr.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
@@ -521,10 +527,10 @@ az adott várost: </value>
     <value>groupBoxLatvanyossag</value>
   </data>
   <data name="&gt;&gt;numericUpDownLAr.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="textBoxLNev.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 52</value>
+    <value>157, 23</value>
   </data>
   <data name="textBoxLNev.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
@@ -542,7 +548,82 @@ az adott várost: </value>
     <value>groupBoxLatvanyossag</value>
   </data>
   <data name="&gt;&gt;textBoxLNev.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
+  </data>
+  <data name="groupBoxLatvanyossag.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 226</value>
+  </data>
+  <data name="groupBoxLatvanyossag.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 307</value>
+  </data>
+  <data name="groupBoxLatvanyossag.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="groupBoxLatvanyossag.Text" xml:space="preserve">
+    <value>Látványosság hozzáadása</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLatvanyossag.Name" xml:space="preserve">
+    <value>groupBoxLatvanyossag</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLatvanyossag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLatvanyossag.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLatvanyossag.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxLatvanyosLeirasModosit.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textBoxLatvanyosLeirasModosit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>499, 359</value>
+  </data>
+  <data name="textBoxLatvanyosLeirasModosit.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxLatvanyosLeirasModosit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 61</value>
+  </data>
+  <data name="textBoxLatvanyosLeirasModosit.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;textBoxLatvanyosLeirasModosit.Name" xml:space="preserve">
+    <value>textBoxLatvanyosLeirasModosit</value>
+  </data>
+  <data name="&gt;&gt;textBoxLatvanyosLeirasModosit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxLatvanyosLeirasModosit.Parent" xml:space="preserve">
+    <value>groupBoxFunkciok</value>
+  </data>
+  <data name="&gt;&gt;textBoxLatvanyosLeirasModosit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonLTorles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>602, 239</value>
+  </data>
+  <data name="buttonLTorles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 35</value>
+  </data>
+  <data name="buttonLTorles.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="buttonLTorles.Text" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="&gt;&gt;buttonLTorles.Name" xml:space="preserve">
+    <value>buttonLTorles</value>
+  </data>
+  <data name="&gt;&gt;buttonLTorles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonLTorles.Parent" xml:space="preserve">
+    <value>groupBoxFunkciok</value>
+  </data>
+  <data name="&gt;&gt;buttonLTorles.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -558,14 +639,13 @@ az adott várost: </value>
     <value>370, 386</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 34</value>
+    <value>55, 17</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
-    <value>Válassza ki 
-az adott várost: </value>
+    <value>Leírás: </value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -577,34 +657,7 @@ az adott várost: </value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="listBox1.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>501, 353</value>
-  </data>
-  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 100</value>
-  </data>
-  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
-    <value>listBox1</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
-    <value>groupBoxFunkciok</value>
-  </data>
-  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="buttonLatvanyossagModosit.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -634,7 +687,7 @@ az adott várost: </value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;buttonLatvanyossagModosit.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -667,7 +720,7 @@ az adott várost: </value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -679,7 +732,7 @@ az adott várost: </value>
     <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 262</value>
+    <value>353, 285</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>127, 17</value>
@@ -700,55 +753,55 @@ az adott várost: </value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="numericUpDown1.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="numericUpDown1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>501, 310</value>
-  </data>
-  <data name="numericUpDown1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>179, 22</value>
-  </data>
-  <data name="numericUpDown1.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown1.Name" xml:space="preserve">
-    <value>numericUpDown1</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown1.Parent" xml:space="preserve">
-    <value>groupBoxFunkciok</value>
-  </data>
-  <data name="&gt;&gt;numericUpDown1.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="textBox1.Enabled" type="System.Boolean, mscorlib">
+  <data name="numericUpDownLatvanyArModosit.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>499, 262</value>
+  <data name="numericUpDownLatvanyArModosit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>501, 310</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="numericUpDownLatvanyArModosit.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="numericUpDownLatvanyArModosit.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;numericUpDownLatvanyArModosit.Name" xml:space="preserve">
+    <value>numericUpDownLatvanyArModosit</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;numericUpDownLatvanyArModosit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;numericUpDownLatvanyArModosit.Parent" xml:space="preserve">
     <value>groupBoxFunkciok</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;numericUpDownLatvanyArModosit.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="textBoxLatvanyNevModosit.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textBoxLatvanyNevModosit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>499, 282</value>
+  </data>
+  <data name="textBoxLatvanyNevModosit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 22</value>
+  </data>
+  <data name="textBoxLatvanyNevModosit.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;textBoxLatvanyNevModosit.Name" xml:space="preserve">
+    <value>textBoxLatvanyNevModosit</value>
+  </data>
+  <data name="&gt;&gt;textBoxLatvanyNevModosit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxLatvanyNevModosit.Parent" xml:space="preserve">
+    <value>groupBoxFunkciok</value>
+  </data>
+  <data name="&gt;&gt;textBoxLatvanyNevModosit.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="listBoxLatvanyossagok.ItemHeight" type="System.Int32, mscorlib">
     <value>16</value>
@@ -772,7 +825,7 @@ az adott várost: </value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;listBoxLatvanyossagok.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="button1.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -802,7 +855,7 @@ az adott várost: </value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -836,7 +889,7 @@ a db száma:</value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -869,7 +922,7 @@ a db száma:</value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="numericUpDownVarosLakossagModosit.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -893,7 +946,7 @@ a db száma:</value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;numericUpDownVarosLakossagModosit.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="textBoxVarosNevModosit.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -917,34 +970,34 @@ a db száma:</value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;textBoxVarosNevModosit.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
-  <data name="buttonTorles.Enabled" type="System.Boolean, mscorlib">
+  <data name="buttonVTorles.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="buttonTorles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 252</value>
+  <data name="buttonVTorles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 247</value>
   </data>
-  <data name="buttonTorles.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonVTorles.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 30</value>
   </data>
-  <data name="buttonTorles.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonVTorles.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="buttonTorles.Text" xml:space="preserve">
+  <data name="buttonVTorles.Text" xml:space="preserve">
     <value>Törlés</value>
   </data>
-  <data name="&gt;&gt;buttonTorles.Name" xml:space="preserve">
-    <value>buttonTorles</value>
+  <data name="&gt;&gt;buttonVTorles.Name" xml:space="preserve">
+    <value>buttonVTorles</value>
   </data>
-  <data name="&gt;&gt;buttonTorles.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonVTorles.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;buttonTorles.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonVTorles.Parent" xml:space="preserve">
     <value>groupBoxFunkciok</value>
   </data>
-  <data name="&gt;&gt;buttonTorles.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;buttonVTorles.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="listBoxVarosok.ItemHeight" type="System.Int32, mscorlib">
     <value>16</value>
@@ -968,7 +1021,7 @@ a db száma:</value>
     <value>groupBoxFunkciok</value>
   </data>
   <data name="&gt;&gt;listBoxVarosok.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="groupBoxFunkciok.Location" type="System.Drawing.Point, System.Drawing">
     <value>366, 21</value>

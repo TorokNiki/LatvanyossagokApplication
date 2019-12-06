@@ -36,6 +36,8 @@
             this.numericUpDownVarosLakossag = new System.Windows.Forms.NumericUpDown();
             this.textBoxVarosNev = new System.Windows.Forms.TextBox();
             this.groupBoxLatvanyossag = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxLeiras = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.listBoxVarosNevek = new System.Windows.Forms.ListBox();
             this.buttonLFeltolt = new System.Windows.Forms.Button();
@@ -45,26 +47,27 @@
             this.textBoxLNev = new System.Windows.Forms.TextBox();
             this.groupBoxFunkciok = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.buttonLatvanyossagModosit = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.numericUpDownLatvanyArModosit = new System.Windows.Forms.NumericUpDown();
+            this.textBoxLatvanyNevModosit = new System.Windows.Forms.TextBox();
             this.listBoxLatvanyossagok = new System.Windows.Forms.ListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDownVarosLakossagModosit = new System.Windows.Forms.NumericUpDown();
             this.textBoxVarosNevModosit = new System.Windows.Forms.TextBox();
-            this.buttonTorles = new System.Windows.Forms.Button();
+            this.buttonVTorles = new System.Windows.Forms.Button();
             this.listBoxVarosok = new System.Windows.Forms.ListBox();
+            this.buttonLTorles = new System.Windows.Forms.Button();
+            this.textBoxLatvanyosLeirasModosit = new System.Windows.Forms.TextBox();
             this.groupBoxVaros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVarosLakossag)).BeginInit();
             this.groupBoxLatvanyossag.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLAr)).BeginInit();
             this.groupBoxFunkciok.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLatvanyArModosit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVarosLakossagModosit)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,6 +127,8 @@
             // 
             // groupBoxLatvanyossag
             // 
+            this.groupBoxLatvanyossag.Controls.Add(this.label11);
+            this.groupBoxLatvanyossag.Controls.Add(this.textBoxLeiras);
             this.groupBoxLatvanyossag.Controls.Add(this.label5);
             this.groupBoxLatvanyossag.Controls.Add(this.listBoxVarosNevek);
             this.groupBoxLatvanyossag.Controls.Add(this.buttonLFeltolt);
@@ -134,6 +139,16 @@
             resources.ApplyResources(this.groupBoxLatvanyossag, "groupBoxLatvanyossag");
             this.groupBoxLatvanyossag.Name = "groupBoxLatvanyossag";
             this.groupBoxLatvanyossag.TabStop = false;
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            // 
+            // textBoxLeiras
+            // 
+            resources.ApplyResources(this.textBoxLeiras, "textBoxLeiras");
+            this.textBoxLeiras.Name = "textBoxLeiras";
             // 
             // label5
             // 
@@ -152,6 +167,7 @@
             resources.ApplyResources(this.buttonLFeltolt, "buttonLFeltolt");
             this.buttonLFeltolt.Name = "buttonLFeltolt";
             this.buttonLFeltolt.UseVisualStyleBackColor = false;
+            this.buttonLFeltolt.Click += new System.EventHandler(this.buttonLFeltolt_Click);
             // 
             // label3
             // 
@@ -175,20 +191,21 @@
             // 
             // groupBoxFunkciok
             // 
+            this.groupBoxFunkciok.Controls.Add(this.textBoxLatvanyosLeirasModosit);
+            this.groupBoxFunkciok.Controls.Add(this.buttonLTorles);
             this.groupBoxFunkciok.Controls.Add(this.label8);
-            this.groupBoxFunkciok.Controls.Add(this.listBox1);
             this.groupBoxFunkciok.Controls.Add(this.buttonLatvanyossagModosit);
             this.groupBoxFunkciok.Controls.Add(this.label9);
             this.groupBoxFunkciok.Controls.Add(this.label10);
-            this.groupBoxFunkciok.Controls.Add(this.numericUpDown1);
-            this.groupBoxFunkciok.Controls.Add(this.textBox1);
+            this.groupBoxFunkciok.Controls.Add(this.numericUpDownLatvanyArModosit);
+            this.groupBoxFunkciok.Controls.Add(this.textBoxLatvanyNevModosit);
             this.groupBoxFunkciok.Controls.Add(this.listBoxLatvanyossagok);
             this.groupBoxFunkciok.Controls.Add(this.button1);
             this.groupBoxFunkciok.Controls.Add(this.label6);
             this.groupBoxFunkciok.Controls.Add(this.label7);
             this.groupBoxFunkciok.Controls.Add(this.numericUpDownVarosLakossagModosit);
             this.groupBoxFunkciok.Controls.Add(this.textBoxVarosNevModosit);
-            this.groupBoxFunkciok.Controls.Add(this.buttonTorles);
+            this.groupBoxFunkciok.Controls.Add(this.buttonVTorles);
             this.groupBoxFunkciok.Controls.Add(this.listBoxVarosok);
             resources.ApplyResources(this.groupBoxFunkciok, "groupBoxFunkciok");
             this.groupBoxFunkciok.Name = "groupBoxFunkciok";
@@ -198,12 +215,6 @@
             // 
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            // 
-            // listBox1
-            // 
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Name = "listBox1";
             // 
             // buttonLatvanyossagModosit
             // 
@@ -222,21 +233,22 @@
             resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
             // 
-            // numericUpDown1
+            // numericUpDownLatvanyArModosit
             // 
-            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
-            this.numericUpDown1.Name = "numericUpDown1";
+            resources.ApplyResources(this.numericUpDownLatvanyArModosit, "numericUpDownLatvanyArModosit");
+            this.numericUpDownLatvanyArModosit.Name = "numericUpDownLatvanyArModosit";
             // 
-            // textBox1
+            // textBoxLatvanyNevModosit
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
+            resources.ApplyResources(this.textBoxLatvanyNevModosit, "textBoxLatvanyNevModosit");
+            this.textBoxLatvanyNevModosit.Name = "textBoxLatvanyNevModosit";
             // 
             // listBoxLatvanyossagok
             // 
             this.listBoxLatvanyossagok.FormattingEnabled = true;
             resources.ApplyResources(this.listBoxLatvanyossagok, "listBoxLatvanyossagok");
             this.listBoxLatvanyossagok.Name = "listBoxLatvanyossagok";
+            this.listBoxLatvanyossagok.SelectedIndexChanged += new System.EventHandler(this.listBoxLatvanyossagok_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -280,19 +292,35 @@
             resources.ApplyResources(this.textBoxVarosNevModosit, "textBoxVarosNevModosit");
             this.textBoxVarosNevModosit.Name = "textBoxVarosNevModosit";
             // 
-            // buttonTorles
+            // buttonVTorles
             // 
-            this.buttonTorles.BackColor = System.Drawing.Color.Red;
-            resources.ApplyResources(this.buttonTorles, "buttonTorles");
-            this.buttonTorles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonTorles.Name = "buttonTorles";
-            this.buttonTorles.UseVisualStyleBackColor = false;
+            this.buttonVTorles.BackColor = System.Drawing.Color.Red;
+            resources.ApplyResources(this.buttonVTorles, "buttonVTorles");
+            this.buttonVTorles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonVTorles.Name = "buttonVTorles";
+            this.buttonVTorles.UseVisualStyleBackColor = false;
+            this.buttonVTorles.Click += new System.EventHandler(this.buttonVTorles_Click);
             // 
             // listBoxVarosok
             // 
             this.listBoxVarosok.FormattingEnabled = true;
             resources.ApplyResources(this.listBoxVarosok, "listBoxVarosok");
             this.listBoxVarosok.Name = "listBoxVarosok";
+            this.listBoxVarosok.SelectedIndexChanged += new System.EventHandler(this.listBoxVarosok_SelectedIndexChanged);
+            // 
+            // buttonLTorles
+            // 
+            this.buttonLTorles.BackColor = System.Drawing.Color.Red;
+            this.buttonLTorles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            resources.ApplyResources(this.buttonLTorles, "buttonLTorles");
+            this.buttonLTorles.Name = "buttonLTorles";
+            this.buttonLTorles.UseVisualStyleBackColor = false;
+            this.buttonLTorles.Click += new System.EventHandler(this.buttonLTorles_Click);
+            // 
+            // textBoxLatvanyosLeirasModosit
+            // 
+            resources.ApplyResources(this.textBoxLatvanyosLeirasModosit, "textBoxLatvanyosLeirasModosit");
+            this.textBoxLatvanyosLeirasModosit.Name = "textBoxLatvanyosLeirasModosit";
             // 
             // Form1
             // 
@@ -313,7 +341,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLAr)).EndInit();
             this.groupBoxFunkciok.ResumeLayout(false);
             this.groupBoxFunkciok.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLatvanyArModosit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVarosLakossagModosit)).EndInit();
             this.ResumeLayout(false);
 
@@ -342,15 +370,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDownVarosLakossagModosit;
         private System.Windows.Forms.TextBox textBoxVarosNevModosit;
-        private System.Windows.Forms.Button buttonTorles;
+        private System.Windows.Forms.Button buttonVTorles;
         private System.Windows.Forms.ListBox listBoxVarosok;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button buttonLatvanyossagModosit;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDownLatvanyArModosit;
+        private System.Windows.Forms.TextBox textBoxLatvanyNevModosit;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxLeiras;
+        private System.Windows.Forms.Button buttonLTorles;
+        private System.Windows.Forms.TextBox textBoxLatvanyosLeirasModosit;
     }
 }
 
