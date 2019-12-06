@@ -827,34 +827,34 @@ az adott várost: </value>
   <data name="&gt;&gt;listBoxLatvanyossagok.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="button1.Enabled" type="System.Boolean, mscorlib">
+  <data name="buttonVModosit.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="buttonVModosit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="buttonVModosit.Location" type="System.Drawing.Point, System.Drawing">
     <value>138, 448</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonVModosit.Size" type="System.Drawing.Size, System.Drawing">
     <value>88, 33</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonVModosit.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="buttonVModosit.Text" xml:space="preserve">
     <value>Módosítás</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;buttonVModosit.Name" xml:space="preserve">
+    <value>buttonVModosit</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonVModosit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonVModosit.Parent" xml:space="preserve">
     <value>groupBoxFunkciok</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonVModosit.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">

@@ -53,7 +53,7 @@
             this.numericUpDownLatvanyArModosit = new System.Windows.Forms.NumericUpDown();
             this.textBoxLatvanyNevModosit = new System.Windows.Forms.TextBox();
             this.listBoxLatvanyossagok = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonVModosit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.numericUpDownVarosLakossagModosit = new System.Windows.Forms.NumericUpDown();
@@ -182,6 +182,11 @@
             // numericUpDownLAr
             // 
             resources.ApplyResources(this.numericUpDownLAr, "numericUpDownLAr");
+            this.numericUpDownLAr.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.numericUpDownLAr.Name = "numericUpDownLAr";
             // 
             // textBoxLNev
@@ -200,7 +205,7 @@
             this.groupBoxFunkciok.Controls.Add(this.numericUpDownLatvanyArModosit);
             this.groupBoxFunkciok.Controls.Add(this.textBoxLatvanyNevModosit);
             this.groupBoxFunkciok.Controls.Add(this.listBoxLatvanyossagok);
-            this.groupBoxFunkciok.Controls.Add(this.button1);
+            this.groupBoxFunkciok.Controls.Add(this.buttonVModosit);
             this.groupBoxFunkciok.Controls.Add(this.label6);
             this.groupBoxFunkciok.Controls.Add(this.label7);
             this.groupBoxFunkciok.Controls.Add(this.numericUpDownVarosLakossagModosit);
@@ -222,6 +227,7 @@
             resources.ApplyResources(this.buttonLatvanyossagModosit, "buttonLatvanyossagModosit");
             this.buttonLatvanyossagModosit.Name = "buttonLatvanyossagModosit";
             this.buttonLatvanyossagModosit.UseVisualStyleBackColor = false;
+            this.buttonLatvanyossagModosit.Click += new System.EventHandler(this.buttonLatvanyossagModosit_Click);
             // 
             // label9
             // 
@@ -236,6 +242,11 @@
             // numericUpDownLatvanyArModosit
             // 
             resources.ApplyResources(this.numericUpDownLatvanyArModosit, "numericUpDownLatvanyArModosit");
+            this.numericUpDownLatvanyArModosit.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numericUpDownLatvanyArModosit.Name = "numericUpDownLatvanyArModosit";
             // 
             // textBoxLatvanyNevModosit
@@ -250,12 +261,13 @@
             this.listBoxLatvanyossagok.Name = "listBoxLatvanyossagok";
             this.listBoxLatvanyossagok.SelectedIndexChanged += new System.EventHandler(this.listBoxLatvanyossagok_SelectedIndexChanged);
             // 
-            // button1
+            // buttonVModosit
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buttonVModosit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            resources.ApplyResources(this.buttonVModosit, "buttonVModosit");
+            this.buttonVModosit.Name = "buttonVModosit";
+            this.buttonVModosit.UseVisualStyleBackColor = false;
+            this.buttonVModosit.Click += new System.EventHandler(this.buttonVModosit_Click);
             // 
             // label6
             // 
@@ -365,7 +377,7 @@
         private System.Windows.Forms.TextBox textBoxLNev;
         private System.Windows.Forms.GroupBox groupBoxFunkciok;
         private System.Windows.Forms.ListBox listBoxLatvanyossagok;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonVModosit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDownVarosLakossagModosit;

@@ -9,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace LatvanyossagokApplication
 {
     public partial class Form1 : Form
     {
+        
         MySqlConnection conn;
         public Form1()
         {
@@ -44,7 +46,7 @@ namespace LatvanyossagokApplication
                                   `varos_id` int(11) NOT NULL,
                                   PRIMARY KEY (`id`),
                                   KEY `varos_id` (`varos_id`),
-                                FOREIGN KEY(varos_id) REFERENCES varosok (id)
+                                FOREIGN KEY(varos_id) REFERENCES varosok (id) ON DELETE CASCADE ON UPDATE CASCADE
                                 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;";
             cmd.ExecuteNonQuery();
         }
@@ -102,42 +104,89 @@ namespace LatvanyossagokApplication
         }
         private void buttonVarosFeltolt_Click(object sender, EventArgs e)
         {
+            
+            if (Regex.Match(textBoxVarosNev.Text, @"^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$").Success)
+            {
             var cmd = conn.CreateCommand();
             cmd.CommandText = @"INSERT INTO varosok (nev, lakossag) VALUES (@nev, @lakossag)";
             cmd.Parameters.AddWithValue("@nev", textBoxVarosNev.Text);
             cmd.Parameters.AddWithValue("@lakossag", numericUpDownVarosLakossag.Value);
             cmd.ExecuteNonQuery();
+           
+            }
+            else
+            {
+                MessageBox.Show("Nem jó név formátumot adtál meg!");
+                return;
+            }
             VarosListazas();
+            textBoxVarosNev.Text = "";
+            numericUpDownVarosLakossag.Value = 1;
+
         }
         private void buttonLFeltolt_Click(object sender, EventArgs e)
         {
-            var cmd = conn.CreateCommand();
-            cmd.CommandText = @"INSERT INTO `latvanyossagok`(`nev`, `leiras`, `ar`, `varos_id`) VALUES (@nev,@leiras,@ar,@varosId)";
-            cmd.Parameters.AddWithValue("@nev", textBoxLNev.Text);
-            cmd.Parameters.AddWithValue("@leiras", textBoxLeiras.Text);
-            cmd.Parameters.AddWithValue("@ar", numericUpDownLAr.Value);
-            var varos = (Varosok)listBoxVarosNevek.SelectedItem;
-            cmd.Parameters.AddWithValue("@varosId", varos.Id);
-            cmd.ExecuteNonQuery();
+            if (Regex.Match(textBoxLNev.Text, @"^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$").Success)
+            {
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = @"INSERT INTO `latvanyossagok`(`nev`, `leiras`, `ar`, `varos_id`) VALUES (@nev,@leiras,@ar,@varosId)";
+                cmd.Parameters.AddWithValue("@nev", textBoxLNev.Text);
+                cmd.Parameters.AddWithValue("@leiras", textBoxLeiras.Text);
+                cmd.Parameters.AddWithValue("@ar", numericUpDownLAr.Value);
+                var varos = (Varosok)listBoxVarosNevek.SelectedItem;
+                cmd.Parameters.AddWithValue("@varosId", varos.Id);
+                cmd.ExecuteNonQuery();
+               
+            }
+            else
+            {
+                MessageBox.Show("Nem jó név formátumot adtál meg!");
+                return;
+            }
             latvanyossagLista();
+            textBoxLNev.Text = "";
+            textBoxLeiras.Text = "";
+            numericUpDownLAr.Value = 0;
+            listBoxVarosNevek.ClearSelected();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            desabledLatvanyossag();
+            desabledVarosok();
             VarosListazas();
             latvanyossagLista();
         }
 
         private void listBoxVarosok_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonVTorles.Enabled = true;
-            label6.Enabled = true;
-            label7.Enabled = true;
-            textBoxVarosNevModosit.Enabled = true;
-            numericUpDownVarosLakossagModosit.Enabled = true;
-            var varos = (Varosok)listBoxVarosok.SelectedItem;
-            textBoxVarosNevModosit.Text = varos.Nev;
-            numericUpDownVarosLakossagModosit.Value = varos.Lakossag;
+            if (listBoxVarosok.SelectedIndex >= 0)
+            {
+                buttonVTorles.Enabled = true;
+                label6.Enabled = true;
+                label7.Enabled = true;
+                buttonVModosit.Enabled = true;
+                textBoxVarosNevModosit.Enabled = true;
+                numericUpDownVarosLakossagModosit.Enabled = true;
+                var varos = (Varosok)listBoxVarosok.SelectedItem;
+                textBoxVarosNevModosit.Text = varos.Nev;
+                numericUpDownVarosLakossagModosit.Value = varos.Lakossag;
+            }
+            else
+            {
+                desabledVarosok();
+            }
+        }
+        private void desabledVarosok()
+        {
+            buttonVTorles.Enabled = false;
+            buttonVModosit.Enabled = false;
+            label6.Enabled = false;
+            label7.Enabled = false;
+            textBoxVarosNevModosit.Enabled = false;
+            numericUpDownVarosLakossagModosit.Enabled = false;
+            textBoxVarosNevModosit.Text = "";
+            numericUpDownVarosLakossagModosit.Value = 1;
         }
 
 
@@ -157,7 +206,7 @@ namespace LatvanyossagokApplication
             cmd.Parameters.AddWithValue("@id", varos.Id);
 
             cmd.ExecuteNonQuery();
-
+            latvanyossagLista();
             VarosListazas();
         }
 
@@ -177,13 +226,16 @@ namespace LatvanyossagokApplication
             cmd.Parameters.AddWithValue("@id", latvanyossag.LatvanyossagId);
 
             cmd.ExecuteNonQuery();
-
+            VarosListazas();
             latvanyossagLista();
         }
 
         private void listBoxLatvanyossagok_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBoxLatvanyossagok.SelectedIndex>=0)
+            {
             buttonLTorles.Enabled = true;
+            buttonLatvanyossagModosit.Enabled = true;
             label10.Enabled = true;
             label9.Enabled = true;
             label8.Enabled = true;
@@ -194,6 +246,80 @@ namespace LatvanyossagokApplication
             textBoxLatvanyNevModosit.Text = latavnyossag.LatvanyossagNev;
             textBoxLatvanyosLeirasModosit.Text = latavnyossag.LatvanyossagLeiras;
             numericUpDownLatvanyArModosit.Value = latavnyossag.LatvanyossagAr;
+            }
+            else
+            {
+                desabledLatvanyossag();
+            }
+
+            
+        }
+        private void desabledLatvanyossag()
+        {
+
+            buttonLTorles.Enabled = false;
+            buttonLatvanyossagModosit.Enabled = false;
+            label10.Enabled = false;
+            label9.Enabled = false;
+            label8.Enabled = false;
+            textBoxLatvanyNevModosit.Enabled = false;
+            textBoxLatvanyosLeirasModosit.Enabled = false;
+            numericUpDownLatvanyArModosit.Enabled = false;
+            textBoxLatvanyNevModosit.Text = "";
+            textBoxLatvanyosLeirasModosit.Text = "";
+            numericUpDownLatvanyArModosit.Value = 0;
+        }
+
+        private void buttonVModosit_Click(object sender, EventArgs e)
+        {
+            
+                if (Regex.Match(textBoxVarosNevModosit.Text, @"^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$").Success)
+                {
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = @"UPDATE varosok SET nev= @nev,lakossag= @lakossag WHERE id= @id";
+                    cmd.Parameters.AddWithValue("@nev", textBoxVarosNevModosit.Text);
+                    cmd.Parameters.AddWithValue("@lakossag", numericUpDownVarosLakossagModosit.Value);
+                    var varos = (Varosok)listBoxVarosok.SelectedItem;
+                    cmd.Parameters.AddWithValue("@id", varos.Id);
+                    cmd.ExecuteNonQuery();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Nem jó név formátumot adtál meg!");
+                    return;
+                }
+                VarosListazas();
+                listBoxVarosok.ClearSelected();
+                desabledVarosok();
+            
+        }
+
+        private void buttonLatvanyossagModosit_Click(object sender, EventArgs e)
+        {
+            
+                if (Regex.Match(textBoxLatvanyNevModosit.Text, @"^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$").Success)
+                {
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = @"UPDATE latvanyossagok SET nev = @nev, leiras = @leiras, ar = @ar WHERE id = @id";
+                    cmd.Parameters.AddWithValue("@nev", textBoxLatvanyNevModosit.Text);
+                    cmd.Parameters.AddWithValue("@leiras", textBoxLatvanyosLeirasModosit.Text);
+                    cmd.Parameters.AddWithValue("@ar", numericUpDownLatvanyArModosit.Value);
+                    var latvanyossag = (Latvanyossag)listBoxLatvanyossagok.SelectedItem;
+                    cmd.Parameters.AddWithValue("@id", latvanyossag.LatvanyossagId);
+                    cmd.ExecuteNonQuery();
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Nem jó név formátumot adtál meg!");
+                    return;
+                }
+                latvanyossagLista();
+                listBoxLatvanyossagok.ClearSelected();
+                desabledLatvanyossag();
+            
+            
         }
     }
 }
