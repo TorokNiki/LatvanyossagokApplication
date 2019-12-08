@@ -117,98 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;buttonVarosFeltolt.Name" xml:space="preserve">
-    <value>buttonVarosFeltolt</value>
-  </data>
-  <data name="&gt;&gt;buttonVarosFeltolt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonVarosFeltolt.Parent" xml:space="preserve">
-    <value>groupBoxVaros</value>
-  </data>
-  <data name="&gt;&gt;buttonVarosFeltolt.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>groupBoxVaros</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBoxVaros</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownVarosLakossag.Name" xml:space="preserve">
-    <value>numericUpDownVarosLakossag</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownVarosLakossag.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownVarosLakossag.Parent" xml:space="preserve">
-    <value>groupBoxVaros</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownVarosLakossag.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;textBoxVarosNev.Name" xml:space="preserve">
-    <value>textBoxVarosNev</value>
-  </data>
-  <data name="&gt;&gt;textBoxVarosNev.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxVarosNev.Parent" xml:space="preserve">
-    <value>groupBoxVaros</value>
-  </data>
-  <data name="&gt;&gt;textBoxVarosNev.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="groupBoxVaros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 3</value>
-  </data>
-  <data name="groupBoxVaros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 217</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBoxVaros.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBoxVaros.Text" xml:space="preserve">
-    <value>Város hozzáadása</value>
-  </data>
-  <data name="&gt;&gt;groupBoxVaros.Name" xml:space="preserve">
-    <value>groupBoxVaros</value>
-  </data>
-  <data name="&gt;&gt;groupBoxVaros.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxVaros.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBoxVaros.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="buttonVarosFeltolt.Location" type="System.Drawing.Point, System.Drawing">
     <value>136, 157</value>
   </data>
   <data name="buttonVarosFeltolt.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 36</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="buttonVarosFeltolt.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -323,6 +239,30 @@ a db száma:</value>
   </data>
   <data name="&gt;&gt;textBoxVarosNev.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="groupBoxVaros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 3</value>
+  </data>
+  <data name="groupBoxVaros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 217</value>
+  </data>
+  <data name="groupBoxVaros.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBoxVaros.Text" xml:space="preserve">
+    <value>Város hozzáadása</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVaros.Name" xml:space="preserve">
+    <value>groupBoxVaros</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVaros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVaros.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxVaros.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

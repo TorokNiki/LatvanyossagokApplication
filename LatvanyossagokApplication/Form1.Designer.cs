@@ -46,6 +46,8 @@
             this.numericUpDownLAr = new System.Windows.Forms.NumericUpDown();
             this.textBoxLNev = new System.Windows.Forms.TextBox();
             this.groupBoxFunkciok = new System.Windows.Forms.GroupBox();
+            this.textBoxLatvanyosLeirasModosit = new System.Windows.Forms.TextBox();
+            this.buttonLTorles = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.buttonLatvanyossagModosit = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,8 +62,6 @@
             this.textBoxVarosNevModosit = new System.Windows.Forms.TextBox();
             this.buttonVTorles = new System.Windows.Forms.Button();
             this.listBoxVarosok = new System.Windows.Forms.ListBox();
-            this.buttonLTorles = new System.Windows.Forms.Button();
-            this.textBoxLatvanyosLeirasModosit = new System.Windows.Forms.TextBox();
             this.groupBoxVaros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownVarosLakossag)).BeginInit();
             this.groupBoxLatvanyossag.SuspendLayout();
@@ -98,6 +98,7 @@
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Name = "label1";
             // 
             // numericUpDownVarosLakossag
@@ -147,6 +148,7 @@
             // 
             // textBoxLeiras
             // 
+            this.textBoxLeiras.BackColor = System.Drawing.SystemColors.HighlightText;
             resources.ApplyResources(this.textBoxLeiras, "textBoxLeiras");
             this.textBoxLeiras.Name = "textBoxLeiras";
             // 
@@ -215,6 +217,20 @@
             resources.ApplyResources(this.groupBoxFunkciok, "groupBoxFunkciok");
             this.groupBoxFunkciok.Name = "groupBoxFunkciok";
             this.groupBoxFunkciok.TabStop = false;
+            // 
+            // textBoxLatvanyosLeirasModosit
+            // 
+            resources.ApplyResources(this.textBoxLatvanyosLeirasModosit, "textBoxLatvanyosLeirasModosit");
+            this.textBoxLatvanyosLeirasModosit.Name = "textBoxLatvanyosLeirasModosit";
+            // 
+            // buttonLTorles
+            // 
+            this.buttonLTorles.BackColor = System.Drawing.Color.Red;
+            this.buttonLTorles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            resources.ApplyResources(this.buttonLTorles, "buttonLTorles");
+            this.buttonLTorles.Name = "buttonLTorles";
+            this.buttonLTorles.UseVisualStyleBackColor = false;
+            this.buttonLTorles.Click += new System.EventHandler(this.buttonLTorles_Click);
             // 
             // label8
             // 
@@ -319,20 +335,6 @@
             resources.ApplyResources(this.listBoxVarosok, "listBoxVarosok");
             this.listBoxVarosok.Name = "listBoxVarosok";
             this.listBoxVarosok.SelectedIndexChanged += new System.EventHandler(this.listBoxVarosok_SelectedIndexChanged);
-            // 
-            // buttonLTorles
-            // 
-            this.buttonLTorles.BackColor = System.Drawing.Color.Red;
-            this.buttonLTorles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            resources.ApplyResources(this.buttonLTorles, "buttonLTorles");
-            this.buttonLTorles.Name = "buttonLTorles";
-            this.buttonLTorles.UseVisualStyleBackColor = false;
-            this.buttonLTorles.Click += new System.EventHandler(this.buttonLTorles_Click);
-            // 
-            // textBoxLatvanyosLeirasModosit
-            // 
-            resources.ApplyResources(this.textBoxLatvanyosLeirasModosit, "textBoxLatvanyosLeirasModosit");
-            this.textBoxLatvanyosLeirasModosit.Name = "textBoxLatvanyosLeirasModosit";
             // 
             // Form1
             // 

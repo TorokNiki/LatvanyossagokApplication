@@ -104,44 +104,76 @@ namespace LatvanyossagokApplication
         }
         private void buttonVarosFeltolt_Click(object sender, EventArgs e)
         {
-            
-            if (Regex.Match(textBoxVarosNev.Text, @"^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$").Success)
+            if (textBoxVarosNev.TextLength > 0)
             {
-            var cmd = conn.CreateCommand();
-            cmd.CommandText = @"INSERT INTO varosok (nev, lakossag) VALUES (@nev, @lakossag)";
-            cmd.Parameters.AddWithValue("@nev", textBoxVarosNev.Text);
-            cmd.Parameters.AddWithValue("@lakossag", numericUpDownVarosLakossag.Value);
-            cmd.ExecuteNonQuery();
-           
+                if (Regex.Match(textBoxVarosNev.Text, @"^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$").Success)
+                {
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = @"INSERT INTO varosok (nev, lakossag) VALUES (@nev, @lakossag)";
+                    cmd.Parameters.AddWithValue("@nev", textBoxVarosNev.Text);
+                    cmd.Parameters.AddWithValue("@lakossag", numericUpDownVarosLakossag.Value);
+                    cmd.ExecuteNonQuery();
+                    label1.ForeColor = Color.Black;
+
+                }
+                else
+                {
+                    MessageBox.Show("Nem jó név formátumot adtál meg!");
+                    label1.ForeColor = Color.Red;
+                    // return;
+                }
             }
             else
             {
-                MessageBox.Show("Nem jó név formátumot adtál meg!");
-                return;
+                MessageBox.Show("Nem mindent töltöttél ki!");
+                label1.ForeColor = Color.Red;
             }
-            VarosListazas();
+                VarosListazas();
             textBoxVarosNev.Text = "";
             numericUpDownVarosLakossag.Value = 1;
 
         }
         private void buttonLFeltolt_Click(object sender, EventArgs e)
         {
-            if (Regex.Match(textBoxLNev.Text, @"^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$").Success)
+            if (textBoxLNev.TextLength > 0 && textBoxLeiras.TextLength > 0 && listBoxVarosNevek.SelectedIndex >= 0)
             {
-                var cmd = conn.CreateCommand();
-                cmd.CommandText = @"INSERT INTO `latvanyossagok`(`nev`, `leiras`, `ar`, `varos_id`) VALUES (@nev,@leiras,@ar,@varosId)";
-                cmd.Parameters.AddWithValue("@nev", textBoxLNev.Text);
-                cmd.Parameters.AddWithValue("@leiras", textBoxLeiras.Text);
-                cmd.Parameters.AddWithValue("@ar", numericUpDownLAr.Value);
-                var varos = (Varosok)listBoxVarosNevek.SelectedItem;
-                cmd.Parameters.AddWithValue("@varosId", varos.Id);
-                cmd.ExecuteNonQuery();
-               
+                if (Regex.Match(textBoxLNev.Text, @"^([a-zA-Z\u0080-\u024F]+(?:. |-| |'))*[a-zA-Z\u0080-\u024F]*$").Success)
+                {
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = @"INSERT INTO `latvanyossagok`(`nev`, `leiras`, `ar`, `varos_id`) VALUES (@nev,@leiras,@ar,@varosId)";
+                    cmd.Parameters.AddWithValue("@nev", textBoxLNev.Text);
+                    cmd.Parameters.AddWithValue("@leiras", textBoxLeiras.Text);
+                    cmd.Parameters.AddWithValue("@ar", numericUpDownLAr.Value);
+                    var varos = (Varosok)listBoxVarosNevek.SelectedItem;
+                    cmd.Parameters.AddWithValue("@varosId", varos.Id);
+                    cmd.ExecuteNonQuery();
+                    label4.ForeColor = Color.Black;
+                    label5.ForeColor = Color.Black;
+                    label11.ForeColor = Color.Black;
+
+                }
+                else
+                {
+                    MessageBox.Show("Nem jó név formátumot adtál meg!");
+                    label4.ForeColor = Color.Red;
+                    // return;
+                }
             }
             else
             {
-                MessageBox.Show("Nem jó név formátumot adtál meg!");
-                return;
+                if (textBoxLNev.TextLength <= 0)
+                {
+                    label4.ForeColor = Color.Red;
+                }
+                if (textBoxLeiras.TextLength <= 0)
+                {
+                    label11.ForeColor = Color.Red;
+                }
+                if (listBoxVarosNevek.SelectedIndex < 0)
+                {
+                    label5.ForeColor = Color.Red;
+                }
+                MessageBox.Show("Nem mindent töltöttél ki!");
             }
             latvanyossagLista();
             textBoxLNev.Text = "";
@@ -152,6 +184,11 @@ namespace LatvanyossagokApplication
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            label1.ForeColor = Color.Black;
+            label11.ForeColor = Color.Black;
+            label5.ForeColor = Color.Black;
+            label4.ForeColor = Color.Black;
+            
             desabledLatvanyossag();
             desabledVarosok();
             VarosListazas();
@@ -287,7 +324,7 @@ namespace LatvanyossagokApplication
                 else
                 {
                     MessageBox.Show("Nem jó név formátumot adtál meg!");
-                    return;
+                   // return;
                 }
                 VarosListazas();
                 listBoxVarosok.ClearSelected();
@@ -313,7 +350,7 @@ namespace LatvanyossagokApplication
                 else
                 {
                     MessageBox.Show("Nem jó név formátumot adtál meg!");
-                    return;
+                   // return;
                 }
                 latvanyossagLista();
                 listBoxLatvanyossagok.ClearSelected();
