@@ -85,20 +85,24 @@ namespace LatvanyossagokApplication
         void latvanyossagLista()
         {
             listBoxLatvanyossagok.Items.Clear();
-            
-            var cmd = conn.CreateCommand();
-            cmd.CommandText = @"SELECT `id`, `nev`, `leiras`, `ar`, `varos_id` FROM `latvanyossagok`";
-            using (var reader = cmd.ExecuteReader())
+            if (listBoxVarosok.SelectedIndex >= 0)
             {
-                while (reader.Read())
+                var cmd = conn.CreateCommand();
+                cmd.CommandText = @"SELECT `id`, `nev`, `leiras`, `ar`, `varos_id` FROM `latvanyossagok` Where varos_id = @id ";
+                var varos = (Varosok)listBoxVarosok.SelectedItem;
+                cmd.Parameters.AddWithValue("@id", varos.Id);
+                using (var reader = cmd.ExecuteReader())
                 {
-                    var id = reader.GetInt32("id");
-                    var nev = reader.GetString("nev");
-                    var ar = reader.GetInt32("ar");
-                    var leiras = reader.GetString("leiras");
-                    var vid = reader.GetInt32("varos_id");
-                    var latvanyossag = new Latvanyossag(id,nev,leiras,ar,vid);
-                    listBoxLatvanyossagok.Items.Add(latvanyossag);
+                    while (reader.Read())
+                    {
+                        var id = reader.GetInt32("id");
+                        var nev = reader.GetString("nev");
+                        var ar = reader.GetInt32("ar");
+                        var leiras = reader.GetString("leiras");
+                        var vid = reader.GetInt32("varos_id");
+                        var latvanyossag = new Latvanyossag(id, nev, leiras, ar, vid);
+                        listBoxLatvanyossagok.Items.Add(latvanyossag);
+                    }
                 }
             }
         }
@@ -208,11 +212,15 @@ namespace LatvanyossagokApplication
                 var varos = (Varosok)listBoxVarosok.SelectedItem;
                 textBoxVarosNevModosit.Text = varos.Nev;
                 numericUpDownVarosLakossagModosit.Value = varos.Lakossag;
+                latvanyossagLista();
+              
             }
             else
             {
                 desabledVarosok();
+                desabledLatvanyossag();
             }
+            
         }
         private void desabledVarosok()
         {
